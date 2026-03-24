@@ -44,8 +44,8 @@ docker compose up -d
 This will start all parts of the application.
 
 You can access the frontend and backend in your browser:
-- Frontend: <your-ip>:<frontend-port>
-- Backend: <your-ip>:<backend-port>
+- Frontend: `<your-ip>:<frontend-port>`
+- Backend: `<your-ip>:<backend-port>`
 
 To stop the application use
 ```sh

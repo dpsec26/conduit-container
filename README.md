@@ -7,6 +7,9 @@ This project is the containerized version of the [Conduit Backend](https://githu
 - [Prerequisites](#prerequisites)
 - [Quick start](#quick-start)
 - [Usage](#usage)
+    - [Start and stop the application](#start-and-stop-the-application)
+    - [Create Django superuser](#optional-create-django-superuser)
+    - [Access log files](#access-log-files)
 
 ## Prerequisites
 
@@ -27,7 +30,7 @@ cp example.env .env
 > [!NOTE]
 > You should change the `SECRET_KEY` and the passwords if the application is accessible from the internet.
 
-3. Start the aplication via Docker Compose
+3. Start the application via Docker Compose
 ```sh
 docker compose up -d
 ```
@@ -41,11 +44,11 @@ You can start the application with a simple
 # use -d for detached mode
 docker compose up -d
 ```
-This will start all parts of the application.
+This will start all services.
 
 You can access the frontend and backend in your browser:
-- Frontend: `<your-ip>:<frontend-port>`
-- Backend: `<your-ip>:<backend-port>`
+- Frontend: http://localhost:8282
+- Backend: http://localhost:8080
 
 To stop the application use
 ```sh

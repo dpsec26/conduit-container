@@ -10,8 +10,8 @@ This project is the containerized version of the [Conduit Backend](https://githu
 
 ## Prerequisites
 
-** Git **
-** Docker **
+**Git**
+**Docker**
 
 ## Quick start
 
@@ -20,19 +20,17 @@ This project is the containerized version of the [Conduit Backend](https://githu
 git clone git@github.com:dpsec26/conduit-container.git
 ```
 
-1. Create (or copy) the `.env` file
+2. Create (or copy) the `.env` file
 ```sh
 cp example.env .env
 ```
 > [!NOTE]
 > You should change the `SECRET_KEY` and the passwords if the application is accessible from the internet.
 
-1. Start the aplication via Docker Compose
+3. Start the aplication via Docker Compose
 ```sh
 docker compose up -d
 ```
-
-1. Check if the application is running under <your-ip>:<frontend-port> in your browser.
 
 ## Usage
 

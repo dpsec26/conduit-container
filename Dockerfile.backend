@@ -11,5 +11,5 @@ RUN chmod +x /app/entrypoint.sh
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE ${BACKEND_PORT}
+EXPOSE 8080
 ENTRYPOINT [ "/app/entrypoint.sh" ]

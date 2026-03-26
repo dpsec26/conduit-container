@@ -8,19 +8,18 @@ This project is the containerized version of the [Conduit Backend](https://githu
 - [Quick start](#quick-start)
 - [Usage](#usage)
     - [Start and stop the application](#start-and-stop-the-application)
-    - [Create Django superuser](#optional-create-django-superuser)
     - [Access log files](#access-log-files)
 
 ## Prerequisites
 
-**Git**
-**Docker**
+- **Git**
+- **Docker**
 
 ## Quick start
 
 1. Clone the repository
 ```sh
-git clone git@github.com:dpsec26/conduit-container.git
+git clone --recurse-submodules git@github.com:dpsec26/conduit-container.git
 ```
 
 2. Create (or copy) the `.env` file
@@ -46,6 +45,9 @@ docker compose up -d
 ```
 This will start all services.
 
+> [!NOTE]
+> A Django superuser is automatically created with the credentials from the `.env` the first time you start this.
+
 You can access the frontend and backend in your browser:
 - Frontend: http://localhost:8282
 - Backend: http://localhost:8080
@@ -54,22 +56,6 @@ To stop the application use
 ```sh
 docker compose down
 ```
-
-### (Optional) Create Django superuser
-
-Open an interactive shell on the backend with
-```sh
-docker compose exec backend sh
-```
-
-> [!NOTE]
-> Make sure variables in the `.env` (`DJANGO_SUPERUSER_*`) are set correctly. 
-
-In the shell you can create the superuser with
-```sh
-python manage.py create_superuser_from_env
-```
-You only have to do this once.
 
 ### Access log files
 

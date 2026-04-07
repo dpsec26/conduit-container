@@ -1,0 +1,8 @@
+*.env
+*.git*
+*.md
+*.yaml
+*.yml
+*.pdf
+
+*/node_modules

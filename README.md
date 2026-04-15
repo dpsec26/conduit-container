@@ -78,7 +78,7 @@ docker compose logs <container-name> > my-log-file.txt
 ### Deployment
 
 The deployment workflow is defined in [deployment.yaml](./.github/workflows/deployment.yaml).
-It triggers when a new release is published. You can also trigger it manually.
+It triggers when a tag is pushed. You can also trigger it manually.
 
 > [!NOTE]
 > The workflow uses the GitHub Container Registry (GHCR).
@@ -94,30 +94,30 @@ The workflow automates the following steps:
 
 > [!IMPORTANT]
 > The workflow depends on GitHub Secrets. You have to set them before you trigger the workflow.
-> For further information:
-> [GitHub Secrets](https://docs.github.com/en/actions/concepts/security/secrets)
+> For further information see
+> [GitHub Secrets](https://docs.github.com/en/actions/concepts/security/secrets) and
 > [Using secrets in GitHub Actions](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets)
 
 | Secret | Example Value |
 | --- | --- |
-| ALLOWED_HOSTS | <remote-host-ip> |
+| ALLOWED_HOSTS | 1.2.3.4 |
 | BACKEND_PORT | 8080 |
-| BACKEND_URL | <remote-host-ip> |
+| BACKEND_URL | 1.2.3.4 |
 | DB_HOST | db |
 | DJANGO_DEBUG | false |
 | DJANGO_SUPERUSER_EMAIL | admin@example.com |
 | DJANGO_SUPERUSER_PASSWORD | password |
 | DJANGO_SUPERUSER_USER | admin |
 | FRONTEND_PORT | 8282 |
-| FRONTEND_URL | <remote-host-ip> |
-| GHCR_TOKEN | <your-ghcr-token> |
+| FRONTEND_URL | 1.2.3.4 |
+| GHCR_TOKEN | your-ghcr-token |
 | POSTGRES_DB | conduit |
 | POSTGRES_PASSWORD | password |
 | POSTGRES_PORT | 5432 |
 | POSTGRES_USER | admin |
-| REMOTE_HOST | <remote-host-ip> |
-| REMOTE_SSH_KEY | <your-ssh-key> |
-| REMOTE_USER | <your-username> |
+| REMOTE_HOST | 1.2.3.4 |
+| REMOTE_SSH_KEY | your-ssh-key |
+| REMOTE_USER | your-username |
 | SECRET_KEY | secretkey |
 
 > [!CAUTION]

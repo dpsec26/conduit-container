@@ -80,9 +80,9 @@ jobs:
             TARGET_DIR="conduit"
             mkdir -p $TARGET_DIR
             cd $TARGET_DIR
-            mv /tmp/docker-compose-deployment.yaml .
+            mv /tmp/docker-compose-deployment.yaml docker-compose.yaml
             mv /tmp/.env .
-            echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
+            echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "${{ github.repository_owner }}" --password-stdin
             export REPOSITORY_OWNER=${{ github.repository_owner }}
             export FRONTEND_IMAGE_TAG=${{ github.sha }}
             export FRONTEND_PORT=${{ secrets.FRONTEND_PORT }}
@@ -91,3 +91,4 @@ jobs:
             docker compose pull
             docker compose down
             docker compose up -d
+            docker logout ghcr.io

@@ -61,6 +61,7 @@ jobs:
           echo "DB_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}" >> .env
           echo "FRONTEND_PORT=${{ secrets.FRONTEND_PORT }}" >> .env
           echo "FRONTEND_URL=${{ secrets.FRONTEND_URL }}" >> .env
+          echo "REPOSITORY_OWNER=${{ github.repository_owner }}" >> .env
       # copy setup files to vm
       - name: Copy setup files to remote host
         uses: appleboy/scp-action@v1

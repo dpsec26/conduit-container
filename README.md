@@ -78,7 +78,7 @@ docker compose logs <container-name> > my-log-file.txt
 ### Deployment
 
 The deployment workflow is defined in [deployment.yaml](./.github/workflows/deployment.yaml).
-It triggers when a tag is pushed. You can also trigger it manually.
+It triggers when a tag is pushed.
 
 > [!NOTE]
 > The workflow uses the GitHub Container Registry (GHCR).

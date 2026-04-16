@@ -1,7 +1,6 @@
 name: Conduit Container Deployment
 
 on:
-  workflow_dispatch:
   push:
     tags:
       - "*"
